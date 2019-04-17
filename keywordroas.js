@@ -12,7 +12,7 @@ function main() {
         let keyword = keywords.next();
         let roas = keyword.getStats().getReturnOnAdSpend();
         
-        if(roas >= 0){
+        if(roas >= 5) {
             let currentCPC = keyword.bidding().getCpc();
             let newCPC = currentCPC * bidModifier;
             keyword.bidding().setCpc(newCPC);
